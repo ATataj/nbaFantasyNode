@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "mysql2": "^3.14.3",
+    "sequelize": "^6.37.7"
+  },
+  "name": "nbafantasynode",
+  "version": "1.0.0",
+  "description": "a rough Node.js backend for an nba fantasy ai system",
+  "main": "config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ATataj/nbaFantasyNode.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ATataj/nbaFantasyNode/issues"
+  },
+  "homepage": "https://github.com/ATataj/nbaFantasyNode#readme"
+}
