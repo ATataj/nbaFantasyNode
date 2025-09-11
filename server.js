@@ -4,22 +4,24 @@ const port = 3000;
 const server = createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-
+  if (req.url === "/") {
+    res.write('hellows worldos!\n');
+    res.end('finito');
   // this is an example route.
-  if(req.url === "/name") {
+  } else if(req.url === "/name") {
     //this is how we write to the response without ending the stream
-    res.write('custom stuff\n') 
+    res.write('custom stuff\n');
+    res.end('donezo'); 
   } else {
     //  404 case
     res.writeHead(404, {
       "content-type": "text/html",
       "my-header": "missing route"
     });
-    res.write("<h1>404 - Page Not Found</h1>")
+    res.write("<h1>404 - Page Not Found</h1>");
+    res.end('sucka!!!'); 
   }
 
-  //terminates the writes in the response
-  res.end('Hello World!!'); 
   //console.log() goes to command line as console.
   console.log('log stuff'); 
   
